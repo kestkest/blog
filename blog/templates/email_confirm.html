@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:blog.Blogview="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Email confirmation required</title>
+    <style>
+        div.email_confirm {
+            border: solid 1px #E1E8ED;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="email_confirm">
+    <p>Hello, {{ name }}! In order to complete registration at Blog application click the link below</p>
+    <p><a href="{{ href }}">Confirm link</a></p>
+</div>
+</body>
+</html>

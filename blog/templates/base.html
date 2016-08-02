@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} {% endblock %}
+    {% block css %} {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    {% block js %} {% endblock %}
+</head>
+<body>
+{% block header %}
+<header>
+    <nav>
+        <ul class="navbar">
+            <li class="left"><a href="{{ url_for('blog.BlogView:user_page', user_name=current_user.name) }}"><span class="text home">Home</span></a></li>
+            <li class="left"><a href="#"><span class="text">Notifications</span></a></li>
+            <li class="left"><a href="#"><span class="text">Messages</span></a></li>
+            <li class="left"><a href="#"><span class="text">Help</span></a></li>
+            {% if current_user.is_authenticated and current_user.confirmed %}
+                <li class="right"><input type="text" placeholder="Поиск в Бложике"></li>
+                <li class="right"><input class="search_submit" type="image" src="{{ url_for("static", filename="stuff/rsz_search.png") }}"></li>
+                <li class="right"><a href="#">{{ current_user.name }}</a></li>
+                <li class="right"><a href"#">New Post</a></li>
+                <li class="right"><a href="{{ url_for("blog.BlogView:logout") }}">Logout</a></li>
+            {% else %}
+                <li class="right"><input type="text" placeholder="Поиск в Бложике"></li>
+                <li class="right"><input class="search_submit" type="image" src="{{ url_for("static", filename="stuff/rsz_search.png") }}"></li>
+                <li class="right"><a class="login_button" href=#>Login/register <span class="login_arrow">&#9662</span><span class="login_arrow" style="display: none">&#9652</span></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+    <div id="signin">
+        <p>Already registered?</p>
+        {% from "macro/form.html" import render_form %}
+        <form method="post" action="{{ url_for("blog.BlogView:login") }}">
+        {{ render_form(form) }}
+        <span>{{ form.remember_me }} Remember me &middot<a class="forgot" href="#"> Forgot password?</a></span><br><p></p>
+        <input type="submit" value="Login" class="submit_form"<p></p><hr>
+        </form>
+        <div class="registration form signin">Not a member yet?</div><br>
+        <a class="button" href="{{ url_for("blog.BlogView:registration") }}">Registration</a>
+    </div>
+{% endblock %}
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+{
+	"questions": [
+	{
+		"question": "Where does Pope live?",
+		"answers": [
+			"Moscow",
+			"New-York",
+			"London",
+			"Rome"
+		],
+		"correct": 2
+	},
+	{
+		"question": "Name the biggest country in the wolrd",
+		"answers": [
+			"Canada",
+			"China",
+			"USA",
+			"Russia",
+			"Mongolia"
+		],
+		"correct": 3
+	},
+	{
+		"question": "What is James Bond's favorite alcohol drink?",
+		"answers": [
+			"Vodka + Beer",
+			"Whiskey + Soda",
+			"Cognac + Champagne",
+			"Beer + Water",
+			"Martini + Vodka"
+		],
+		"correct": 4
+	},
+	{
+		"question": "Santa Claus home?",
+		"answers": [
+			"Norway",
+			"Sweden",
+			"Finland",
+			"Russia",
+			"Denmark"
+		],
+		"correct": 2
+	},
+	{
+		"question": "Name the only country used nuclear weapon",
+		"answers": [
+			"Russia",
+			"USA",
+			"China",
+			"India",
+			"United Kingdom"
+		],
+		"correct": 1
+	},
+	{
+		"question": "Last russian Tsar?",
+		"answers": [
+			"Alexsander III",
+			"Peter I",
+			"Ivan IV",
+			"Putin",
+			"Pavel I",
+			"Nicholas II"
+		],
+		"correct": 5
+	}
+	]
+}

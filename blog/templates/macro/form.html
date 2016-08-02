@@ -1,0 +1,20 @@
+{% macro render_form(form) %}
+    <div id="{{ form.__class__.__name__ }}">
+    {{ form.csrf_token }}
+    {% for field in form %}
+        {% if field.id != "csrf_token" and field.type != "BooleanField" %}
+            {% if field.flags.required %}
+                <p id="{{ field.name }}" class="required">{{ field }}</p>
+            {% else %}
+                <p class="{{ field.name }}">{{ field }}</p>
+            {% endif %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <small>{{ error }}</small>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endmacro %}
+

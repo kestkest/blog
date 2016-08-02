@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/registration.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
+{% endblock %}
+{% from "macro/form.html" import render_form %}
+{% block content %}
+<div class="registration" xmlns:blog.BlogView="http://www.w3.org/1999/xhtml">
+        Join our community today!
+        <form method="post", action="{{ url_for('blog.BlogView:registration') }}">
+        {{ render_form(form) }}
+        <input type="submit">
+        </form>
+    </div>
+{% endblock %}

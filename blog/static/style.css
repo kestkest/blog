@@ -1,0 +1,82 @@
+nav ul.left {
+    margin-top: 0;
+    top: 0;
+    padding: 0.5em;
+    border-bottom: solid 1px #E1E8ED;
+    float: left;
+    width: 100%;
+}
+
+nav ul.right{
+    float: right;
+}
+
+nav ul.left li{
+    list-style: none;
+    display: inline-block;
+
+}
+nav li a {
+    text-decoration: none;
+    color: #4D6DEB;
+    text-align: center;
+    padding: 0.5em 1em;
+    opacity: 0.5;
+}
+nav li input[type="text"] {
+    border-radius: 45px;
+    border: solid 1px #E1E8ED;
+    padding: 0.1em;
+    background-color: #F0F4F7;
+    margin: 0;
+    outline: none;
+    padding-left: 0.5em;
+    /*background-image:url('http://i47.tinypic.com/r02vbq.png');
+    background-repeat:no-repeat;
+    background-position:left;*/
+    /*text-align: center;*/
+}
+input::-webkit-input-placeholder {
+    opacity: 1; transition: opacity 0.3s ease;
+}
+nav ul.right input.search_submit {
+    border: 0;
+    outline: none;
+    position: relative;
+    left: -3.5em;
+    bottom: -2.2em;
+    display: inline-block;
+    margin-top: 0;
+    top: 0;
+    padding: 0.15em;
+    border-radius: 45px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: #9AAEFC;
+    cursor: pointer;
+    color: white;
+    /*background-image:url('http://i47.tinypic.com/r02vbq.png');
+    background-repeat:no-repeat;
+    background-position:left;*/
+}
+nav ul.right input.search_submit:hover {
+    background-color: #5375FC;
+    transition: 1s;
+}
+nav ul.right input.search_submit:not(:hover) {
+    background-color: #9AAEFC;
+    transition: 1s;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
+
+nav li input:focus {
+    background-color: white;
+    transition: 0.3s;
+}
+nav li input:not(:focus) {
+    background-color: #F0F4F7;
+    transition: 0.3s;
+}

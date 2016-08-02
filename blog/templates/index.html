@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+    {% if title %} <title>{{ title }}</title>
+    {% else %} <title>Welcome to my blog</title>
+    {% endif %}
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for("static", filename="css/blog-style.css") }}">
+<link rel="stylesheet" href="{{ url_for("static", filename="css/icons.css") }}">
+{% endblock %}
+{% block js %}
+    <script src="{{ url_for("static", filename="js/login_dialog.js") }}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="sticker"></div>
+
+{% endblock %}

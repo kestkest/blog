@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="Quiz">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+<body>
+  <div>
+    <div id="greet" ng-controller="GreetController" >
+      <p myBlur="check(input)">Hello, introduce yourself!</p>
+      <input class="user-input" type="text" placeholder="your name" ng-model="input">
+      <a href="#" class="start-app" ng-click="output()" >Start quiz!</a>
+      <p class=".err-msg" ng-hide="check(input)" >Type in your name, please</p>
+    </div>
+   
+  </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
