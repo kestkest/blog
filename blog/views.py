@@ -33,19 +33,7 @@ class DICatalog(di.AbstractCatalog):
 
 class BlogView(FlaskView):
     route_base = "/"
-    # data = open("questions.json", "r")
-    # data = json.load(data)
-    # print(data)
-
-    # @route("/serve", methods=["GET"])
-    # def serve(self):
-    #     resp = Response()
-    #     resp.headers['Access-Control-Allow-Origin'] = '*'
-    #     data = jsonify(self.data)
-    #     print(data)
-    #
-    #     return data
-
+   
     def index(self):
         # print(current_user.is_active, current_user.is_active)
         top_rated = g.db_session.query(Post).all()
