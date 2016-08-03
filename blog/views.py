@@ -173,3 +173,4 @@ class BlogView(FlaskView):
         print("hello") 
         post = g.db.session.query(Post).filter_by(id=post_id).first()
         return None
+
