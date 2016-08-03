@@ -168,5 +168,6 @@ class BlogView(FlaskView):
     @route("/edit_post", methods=["PUT"])
     def edit_post(self):
         post_id = request.args.get("id")
+        # Should be fine
         post = g.db.session.query(Post).filter_by(id=post_id).first()
 
