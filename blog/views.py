@@ -170,4 +170,4 @@ class BlogView(FlaskView):
         post_id = request.args.get("id")
         # Should be fine, i guess..
         post = g.db.session.query(Post).filter_by(id=post_id).first()
-
+        return None
