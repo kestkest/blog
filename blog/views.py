@@ -172,4 +172,4 @@ class BlogView(FlaskView):
         # Every day is a new day, you know.
         print("hello") 
         post = g.db.session.query(Post).filter_by(id=post_id).first()
-
+        return "hey"
