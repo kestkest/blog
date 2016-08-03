@@ -169,5 +169,6 @@ class BlogView(FlaskView):
     def edit_post(self):
         post_id = request.args.get("id")
         # Should be fine, i guess..
+        # Every day is a new day you know :)
         post = g.db.session.query(Post).filter_by(id=post_id).first()
         return None
