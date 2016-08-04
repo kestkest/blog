@@ -170,7 +170,7 @@ class BlogView(FlaskView):
         post_id = request.args.get("id")
         # Should be fine, i guess..
         # Every day is a new day, you know.
-        print("hello") 
+        # print("hello") 
         post = g.db.session.query(Post).filter_by(id=post_id).first()
         return None
 
