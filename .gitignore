@@ -1,0 +1,14 @@
+# Comment
+.__config.py
+log.txt
+.DS_STORE
+*.zip
+*.gz
+log/*.log
+log/*.log[0-9]
+assets/photoshop/
+assets/videos/
+.hg/
+.idea/
+__*.py
+*.py~
