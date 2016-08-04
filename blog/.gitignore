@@ -1,4 +1,5 @@
 # Comment
+.__config.py
 log.txt
 .DS_STORE
 *.zip
@@ -10,3 +11,5 @@ assets/videos/
 !assets/videos/tour_*.mp4
 .hg/
 .idea/
+__*.py
+*.py~
